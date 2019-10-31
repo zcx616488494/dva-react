@@ -1,0 +1,39 @@
+@header-height: 64px;
+@sider-bg: #265293;
+
+
+.logo{
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+.header-right{
+  float: right;
+  height: 100%;
+}
+.search,
+.question,
+.bell,
+.user
+{
+  display: inline-block;
+  height: 100%;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.user{
+  img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
