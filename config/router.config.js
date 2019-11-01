@@ -4,7 +4,7 @@ export default [
     component: '../layouts/BasicLayout',
     routes: [
        // dashboard
-       { path: '/', redirect: '/dashboard/analysis'},
+       { path: '/', redirect: '/dashboard'},
        {
         path: '/dashboard',
         name: '首页',
