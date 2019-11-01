@@ -54,7 +54,7 @@ class SiderMenu extends React.PureComponent {
     }
     return menusData.filter(item => item.name && !item.hideInMenu)
     .map(item => this.getSubMenuOrItem(item))
-    .filter(item => item);
+    .filter(item => item); // 去掉空数组空字符串、undefined、null
   };
 
   /**
@@ -62,6 +62,7 @@ class SiderMenu extends React.PureComponent {
   */
   getSubMenuOrItem = item => {
     // doc: add hideChildrenInMenu
+    // 是否存在子菜单且子菜单存在name属性
     if (item.children && item.children.some(child => child.name)) {
       const { name } = item;
       return (
@@ -90,7 +91,7 @@ class SiderMenu extends React.PureComponent {
     * @memberof SiderMenu
     */
   getMenuItemPath = item => {
-    const { name, icon } = item;
+    const { name } = item;
     const itemPath = this.conversionPath(item.path);
     const { target } = item;
     // Is it a http link
@@ -109,7 +110,9 @@ class SiderMenu extends React.PureComponent {
         target={target}
         replace={itemPath === location.pathname}
       >
-        {icon}
+        {
+          item.icon ? <Icon type={item.icon} /> : ''
+        }
         <span>{name}</span>
       </Link>
     );
@@ -134,7 +137,6 @@ class SiderMenu extends React.PureComponent {
     if (!selectedKeys.length && openKeys) {
       selectedKeys = [openKeys[openKeys.length - 1]];
     }
-    
     return (
       <Sider
         breakpoint="lg"

@@ -105,7 +105,7 @@ class BasicLayout extends React.PureComponent {
                 <span className={styles.question}>
                   <Icon type="question-circle" />
                 </span>
-              </Tooltip>,
+              </Tooltip>
               <span className={styles.bell}>
                 <Icon type="bell" />
               </span>

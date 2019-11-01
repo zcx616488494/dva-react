@@ -6,27 +6,33 @@ export default [
        // dashboard
        { path: '/', redirect: '/dashboard/analysis'},
        {
-         path: '/dashboard',
-         name: 'dashboard',
-         icon: 'dashboard',
-         routes: [
-           {
-             path: '/dashboard/analysis',
-             name: '分析页',
-             component: './Dashboard/Analysis',
-           },
-           {
-             path: '/dashboard/monitor',
-             name: '监控页',
-             component: './Dashboard/Monitor',
-           },
-           {
-             path: '/dashboard/workplace',
-             name: '工作台',
-             component: './Dashboard/Workplace',
-           },
-         ],
+        path: '/dashboard',
+        name: '首页',
+        icon: 'dashboard',
+        component: './Dashboard/Analysis',
        },
+      //  {
+      //    path: '/dashboard',
+      //    name: 'dashboard',
+      //    icon: 'dashboard',
+      //    routes: [
+      //      {
+      //        path: '/dashboard/analysis',
+      //        name: '分析页',
+      //        component: './Dashboard/Analysis',
+      //      },
+      //      {
+      //        path: '/dashboard/monitor',
+      //        name: '监控页',
+      //        component: './Dashboard/Monitor',
+      //      },
+      //      {
+      //        path: '/dashboard/workplace',
+      //        name: '工作台',
+      //        component: './Dashboard/Workplace',
+      //      },
+      //    ],
+      //  },
        // form
        {
         path: '/form',
